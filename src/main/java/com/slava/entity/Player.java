@@ -23,6 +23,4 @@ public class Player {
 
     private String name;
 
-    @OneToMany(mappedBy = "players")
-    private List<Matche> matches = new ArrayList<>();
 }
