@@ -18,11 +18,11 @@ public class Matche {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "players1_id", referencedColumnName = "id")
     private Player player1;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "players2_id", referencedColumnName = "id")
     private Player player2;
 
@@ -30,4 +30,11 @@ public class Matche {
     @JoinColumn(name = "winner_id", referencedColumnName = "id")
     private Player winner;
 
+    public void setPlayer1(Player player1) {
+        this.player1 = player1;
+    }
+
+    public void setPlayer2(Player player2) {
+        this.player2 = player2;
+    }
 }

@@ -22,4 +22,7 @@ public class Player {
     private Long id;
 
     private String name;
+
+    @OneToMany(mappedBy = "players")
+    private List<Matche> matches = new ArrayList<>();
 }

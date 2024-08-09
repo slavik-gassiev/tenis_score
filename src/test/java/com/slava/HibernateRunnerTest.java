@@ -20,10 +20,12 @@ public class HibernateRunnerTest {
             Player player1 = Player.builder()
                     .name("name1")
                     .build();
+            session.persist(player1);
 
             Player player2 = Player.builder()
                     .name("name2")
                     .build();
+            session.persist(player2);
 
             Matche matche = Matche.builder()
                     .player1(player1)
