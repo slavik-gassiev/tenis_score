@@ -1,8 +1,6 @@
 package com.slava.dao;
 
 import com.slava.entity.Player;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityTransaction;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

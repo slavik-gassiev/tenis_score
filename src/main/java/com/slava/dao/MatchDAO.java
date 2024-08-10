@@ -1,13 +1,10 @@
 package com.slava.dao;
 
 import com.slava.entity.Match;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityTransaction;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import java.util.List;
 
 public class MatchDAO implements CrudRepository<Match, Long> {
 
@@ -43,7 +40,7 @@ public class MatchDAO implements CrudRepository<Match, Long> {
 
     @Override
     public List<Match> findAll() {
-        return session.createQuery("FROM Match", Match.class).list();
+        return session.createQuery("SELECT m FROM Match m", Match.class).getResultList();
     }
 
     @Override
