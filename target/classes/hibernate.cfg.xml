@@ -22,7 +22,7 @@
 
     <!-- Маппинг классов -->
     <mapping class="com.slava.entity.MyEntity"/>
-    <mapping class="com.slava.entity.Matche"/>
+    <mapping class="com.slava.entity.Match"/>
     <mapping class="com.slava.entity.Player"/>
   </session-factory>
 </hibernate-configuration>

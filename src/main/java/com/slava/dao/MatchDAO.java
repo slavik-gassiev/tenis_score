@@ -5,23 +5,31 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import java.util.List;
+
 public class MatchDAO implements CrudRepository<Match, Long> {
 
-    private EntityManager entityManager;
+    private Session session;
 
-    public MatchDAO(EntityManager entityManager) {
-        this.entityManager = entityManager;
+    public MatchDAO(Session session) {
+        this.session = session;
+    }
+
+    public Session getSession() {
+        return session;
     }
 
     @Override
     public void save(Match match) {
-        EntityTransaction transaction = entityManager.getTransaction();
+        Transaction transaction = null;
         try {
-            transaction.begin();
-            entityManager.persist(match);
+            transaction = session.beginTransaction();
+            session.persist(match);
             transaction.commit();
         } catch (Exception e) {
-            if (transaction.isActive()) {
+            if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
@@ -30,23 +38,23 @@ public class MatchDAO implements CrudRepository<Match, Long> {
 
     @Override
     public Match findById(Long id) {
-        return entityManager.find(Match.class, id);
+        return session.get(Match.class, id);
     }
 
     @Override
     public List<Match> findAll() {
-        return entityManager.createQuery("SELECT m FROM Match m", Match.class).getResultList();
+        return session.createQuery("FROM Match", Match.class).list();
     }
 
     @Override
     public void update(Match match) {
-        EntityTransaction transaction = entityManager.getTransaction();
+        Transaction transaction = null;
         try {
-            transaction.begin();
-            entityManager.merge(match);
+            transaction = session.beginTransaction();
+            session.merge(match);
             transaction.commit();
         } catch (Exception e) {
-            if (transaction.isActive()) {
+            if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
@@ -55,17 +63,18 @@ public class MatchDAO implements CrudRepository<Match, Long> {
 
     @Override
     public void delete(Match match) {
-        EntityTransaction transaction = entityManager.getTransaction();
+        Transaction transaction = null;
         try {
-            transaction.begin();
-            entityManager.remove(entityManager.contains(match) ? match : entityManager.merge(match));
+            transaction = session.beginTransaction();
+            session.remove(match);
             transaction.commit();
         } catch (Exception e) {
-            if (transaction.isActive()) {
+            if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
         }
     }
 }
+
 

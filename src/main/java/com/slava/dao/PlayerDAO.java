@@ -3,25 +3,32 @@ package com.slava.dao;
 import com.slava.entity.Player;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import java.util.List;
 
 public class PlayerDAO implements CrudRepository<Player, Long> {
 
-    private EntityManager entityManager;
+    private Session session;
 
-    public PlayerDAO(EntityManager entityManager) {
-        this.entityManager = entityManager;
+    public PlayerDAO(Session session) {
+        this.session = session;
+    }
+
+    public Session getSession() {
+        return session;
     }
 
     @Override
     public void save(Player player) {
-        EntityTransaction transaction = entityManager.getTransaction();
+        Transaction transaction = null;
         try {
-            transaction.begin();
-            entityManager.persist(player);
+            transaction = session.beginTransaction();
+            session.persist(player);
             transaction.commit();
         } catch (Exception e) {
-            if (transaction.isActive()) {
+            if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
@@ -30,23 +37,23 @@ public class PlayerDAO implements CrudRepository<Player, Long> {
 
     @Override
     public Player findById(Long id) {
-        return entityManager.find(Player.class, id);
+        return session.get(Player.class, id);
     }
 
     @Override
     public List<Player> findAll() {
-        return entityManager.createQuery("SELECT p FROM Player p", Player.class).getResultList();
+        return session.createQuery("SELECT p FROM Player p", Player.class).getResultList();
     }
 
     @Override
     public void update(Player player) {
-        EntityTransaction transaction = entityManager.getTransaction();
+        Transaction transaction = null;
         try {
-            transaction.begin();
-            entityManager.merge(player);
+            transaction = session.beginTransaction();
+            session.merge(player);
             transaction.commit();
         } catch (Exception e) {
-            if (transaction.isActive()) {
+            if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
@@ -55,13 +62,13 @@ public class PlayerDAO implements CrudRepository<Player, Long> {
 
     @Override
     public void delete(Player player) {
-        EntityTransaction transaction = entityManager.getTransaction();
+        Transaction transaction = null;
         try {
-            transaction.begin();
-            entityManager.remove(entityManager.contains(player) ? player : entityManager.merge(player));
+            transaction = session.beginTransaction();
+            session.remove(player);
             transaction.commit();
         } catch (Exception e) {
-            if (transaction.isActive()) {
+            if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
