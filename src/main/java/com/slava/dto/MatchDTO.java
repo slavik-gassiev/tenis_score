@@ -1,14 +1,15 @@
 package com.slava.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Data
 public class MatchDTO {
-    private Long id;
 
     private PlayerDTO player1;
     private PlayerDTO player2;
