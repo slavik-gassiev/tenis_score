@@ -1,0 +1,16 @@
+
+]
+java:S1854"@Remove this useless assignment to local variable "currentScore".(£ø‹ä8‹Ëÿ”2
+\
+java:S1854!"@Remove this useless assignment to local variable "currentScore".(şÃù8‹Ëÿ”2
+b
+java:S1854$"@Remove this useless assignment to local variable "currentScore".(ˆØÒÿÿÿÿÿ8Ÿ‹Ëÿ”2
+]
+java:S1854)"@Remove this useless assignment to local variable "currentScore".(Ï“»8Ÿ‹Ëÿ”2
+8
+java:S3626,"Remove this redundant jump.(ûÁİ…8Ÿ‹Ëÿ”2
+C	java:S131""Add a default case to this switch.(¨í…¶üÿÿÿÿ8 ‹Ëÿ”2
+U
+java:S1144C"3Remove this unused private "checkSetWinner" method.(æÒ Ùùÿÿÿÿ8¦‹Ëÿ”2
+R
+java:S1144M"5Remove this unused private "checkMatchWinner" method.(Şë©³8¦‹Ëÿ”2
