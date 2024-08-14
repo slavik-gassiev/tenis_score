@@ -1,8 +1,6 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-I
-src/main/webapp/index.jsp,8\e\8e6d3b70c9f5b02570779b0441540d45eceb0ded
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 _
@@ -32,8 +30,22 @@ _
 T
 $src/main/java/com/slava/MainApp.java,7\0\70194728aca130091fdebc9c360b0de74dca4d46
 Z
-*src/main/java/com/slava/entity/Matche.java,9\a\9a9301ae0c95f0f075a873a6e26b7cf99dd70c64
-Z
 *src/main/java/com/slava/entity/Player.java,c\c\cce600d08dd12312251f24d9dce89f3c0f13b7f4
 `
 0src/test/java/com/slava/HibernateRunnerTest.java,0\2\024b67467490512aeaf614e181a1e99473959b7b
+_
+/src/main/java/com/slava/dao/CrudRepository.java,8\5\856da5fb13751aabd4524b7f67a4b54b474ce752
+Y
+)src/main/java/com/slava/entity/Match.java,5\d\5d3467193842c11b27736aa0a0536222dd1db612
+Z
+*src/test/java/com/slava/PlayerDAOTest.java,b\2\b257cb58527403a0462b6d34de0abd4630d61ee7
+Y
+)src/test/java/com/slava/MatchDAOTest.java,9\d\9de9761ab1bd3216ec1573882c6ed70a96db7557
+Z
+*src/main/java/com/slava/dao/PlayerDAO.java,5\1\513ab307d4e2c4a00ef538f2082d15d96b84dc81
+Y
+)src/main/java/com/slava/dao/MatchDAO.java,f\9\f9e9cc90297738088887e6c6e0b0be7f199575d9
+e
+5src/main/java/com/slava/servlets/NewMatchServlet.java,a\6\a60ff33f129acfa611bae762b206d86057e0889a
+M
+src/main/webapp/new-match.jsp,1\0\1041f8c1433fa91fb8894c39178faa87f93f6901

@@ -17,6 +17,6 @@ public class MyServlet extends HttpServlet {
         request.setAttribute("message", "Hello from Servlet!");
 
         // Перенаправление на JSP
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/new-match.jsp").forward(request, response);
     }
 }
