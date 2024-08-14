@@ -18,8 +18,6 @@ Q.idea/sonarlint/securityhotspotstore/4/3/43022136af3ddeca4b4e89e26c8536ebf09972
 ]
 -.idea/artifacts/tenis_score_war_exploded2.xml,4\b\4b9a538e31591d996b6c3450a6a0b936650176a1
 Å
-Q.idea/sonarlint/securityhotspotstore/8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded,b\a\ba553ac59b6707e71c75d153a30b48955826938d
-Å
 Q.idea/sonarlint/securityhotspotstore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392,5\7\57f21a9649435d4c0bebbf63045d868ce2bc78c1
 w
 G.idea/sonarlint/issuestore/2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392,1\8\188792529ee886cbdc6616248007f7a96c73e03d
@@ -49,3 +47,9 @@ e
 5src/main/java/com/slava/servlets/NewMatchServlet.java,a\6\a60ff33f129acfa611bae762b206d86057e0889a
 M
 src/main/webapp/new-match.jsp,1\0\1041f8c1433fa91fb8894c39178faa87f93f6901
+Z
+*src/main/java/com/slava/dto/PlayerDTO.java,1\c\1cf60cf588dd3e1289faf2350da8d354941bf8ed
+Y
+)src/main/java/com/slava/dto/MatchDTO.java,4\0\40aa2747cff9589eb05839a8b36f4085adced765
+`
+0src/main/java/com/slava/service/GameService.java,8\2\824ee7170ab86a321b4918249beda3b9df00a879
