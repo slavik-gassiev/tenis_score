@@ -47,11 +47,11 @@ public class NewMatchServlet extends HttpServlet {
         PlayerDTO player1DTO = null;
         PlayerDTO player2DTO = null;
 
-        if (playerDao.findByName(p1name).equals(null)) {
+        if (playerDao.findByName(p1name) == null) {
             playerDao.save(Player.builder().name(p1name).build());
             player1DTO = PlayerDTO.builder().name(p1name).build();
         }
-        if (playerDao.findByName(p2name).equals(null)) {
+        if (playerDao.findByName(p2name) == null) {
             playerDao.save(Player.builder().name(p2name).build());
             player2DTO = PlayerDTO.builder().name(p2name).build();
         }
