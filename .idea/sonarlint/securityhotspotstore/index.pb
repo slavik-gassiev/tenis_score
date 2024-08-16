@@ -53,7 +53,11 @@ Y
 )src/main/java/com/slava/dto/MatchDTO.java,4\0\40aa2747cff9589eb05839a8b36f4085adced765
 `
 0src/main/java/com/slava/service/GameService.java,8\2\824ee7170ab86a321b4918249beda3b9df00a879
-c
-3src/main/java/com/slava/dao/PlayerDAOInterface.java,4\0\40d3c2a2c421f1d00e229925c7121b1390fe44b0
 h
 8src/main/java/com/slava/service/OnGoingMatchService.java,3\2\325baa7be5c057707569a96585325a00f75f1deb
+I
+src/main/webapp/index.jsp,8\e\8e6d3b70c9f5b02570779b0441540d45eceb0ded
+b
+2src/main/java/com/slava/servlets/ScoreServlet.java,5\9\592631eec8b13118953f25b7435ccf909c3abce7
+O
+src/main/webapp/match-score.jsp,5\f\5ffac691e70824ea8e838c5b39a2ead405a1a8b9

@@ -46,7 +46,7 @@
 
     <div >
         <form action="match-score?uuid=${uuid}" method="post" name="scoredform">
-            <button name = point_winner value="p1">${p1name} scored!</button>
+            <button name ="point_winner" value="p1">${p1name} scored!</button>
             <button name="point_winner" value="p2">${p2name} scored!</button>
         </form>
     </div>

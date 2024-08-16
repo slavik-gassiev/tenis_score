@@ -1,10 +1,15 @@
 
-C	java:S131""Add a default case to this switch.(¨í…¶üÿÿÿÿ8òÿÍŒ•2
-l
-java:S1764O"JCorrect one of the identical sub-expressions on both sides of operator "-"(âƒ¸Šøÿÿÿÿ8õÿÍŒ•2
+h
+java:S11926"FDefine a constant instead of duplicating this literal "deuce" 3 times.(ôëâéıÿÿÿÿ8³øÒÒ•2
 g
-java:S1764T"JCorrect one of the identical sub-expressions on both sides of operator "-"(æşöÇ8öÿÍŒ•2
->
-java:S1116c"Remove this empty statement.(ôŸìúÿÿÿÿ8£—ÏŒ•2
+java:S1192@"JDefine a constant instead of duplicating this literal "tie-break" 3 times.(ş¦ìÑ8³øÒÒ•2
+v
+java:S1450"TRemove the "match" field and declare it as a local variable in the relevant methods.(ªıîúÿÿÿÿ8¸øÒÒ•2
+L	java:S106"+Replace this use of System.out by a logger.(ğŸşøûÿÿÿÿ8»øÒÒ•2
+c
+java:S18547"ARemove this useless assignment to local variable "opponentScore".(Ô¹ìúÿÿÿÿ8½øÒÒ•2
+C	java:S131)""Add a default case to this switch.(¨í…¶üÿÿÿÿ8¾øÒÒ•2
+?
+java:S1116Œ"Remove this empty statement.(ôŸìúÿÿÿÿ8ÂøÒÒ•2
 P
-java:S1144‹"3Remove this unused private "resetTieBreaks" method.(à¢§G8úÿÍŒ•2
+java:S1144¹"3Remove this unused private "resetTieBreaks" method.(à¢§G8ÅøÒÒ•2

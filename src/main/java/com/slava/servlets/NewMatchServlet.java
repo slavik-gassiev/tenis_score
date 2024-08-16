@@ -1,7 +1,6 @@
 package com.slava.servlets;
 
 import com.slava.dao.PlayerDAO;
-import com.slava.dao.PlayerDAOInterface;
 import com.slava.dto.MatchDTO;
 import com.slava.dto.PlayerDTO;
 import com.slava.entity.Player;
@@ -22,7 +21,7 @@ public class NewMatchServlet extends HttpServlet {
 
     private Session session = HibernateUtil.getSessionFactory().openSession();
     private OnGoingMatchService onGoingMatchService = OnGoingMatchService.getInstance();
-    PlayerDAOInterface playerDao = new PlayerDAO(session);
+    PlayerDAO playerDao = new PlayerDAO(session);
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/new-match.jsp").forward(req, resp);

@@ -3,16 +3,21 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>New match</title>
-<%--    <link rel="stylesheet" href="style.css">--%>
+    <<title>Введите имена игроков</title>
 </head>
     <body style="position: relative;height: 100vh;">
     <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
-        <h2>"Укажите название игроков"</h2>
-        <input type="text", name="player1", placeholder="p1 name">
-        <input type="text", name="player2", placeholder="p2 name">
-        <br>
-        <button style="margin-top: 10px; width: 45vh;height: 4vh;">далее</button>
+
+        <h1>Введите имена игроков</h1>
+        <form action="new" method="post">
+            <label for="p1name">Имя игрока 1:</label>
+            <input type="text" id="p1name" name="p1name"><br>
+            <label for="p2name">Имя игрока 2:</label>
+            <input type="text" id="p2name" name="p2name"><br>
+            <input type="submit" value="Отправить">
+        </form>
     </div>
     </body>
 </html>
+
+

@@ -1,0 +1,13 @@
+
+a
+java:S25836"DChange this condition so that it does not always evaluate to "false"(õ¤Â­8ïı®Ø•2
+f
+java:S25832"DChange this condition so that it does not always evaluate to "false"(Ô¡ÛÅúÿÿÿÿ8îı®Ø•2
+R
+java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8€Ô¥×•2
+H
+java:S1948"+Make "playerDao" transient or serializable.(ı¢æ8ğı®Ø•2
+œ
+java:S21592"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(Ô¡ÛÅúÿÿÿÿ8õı®Ø•2
+—
+java:S21596"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(õ¤Â­8öı®Ø•2

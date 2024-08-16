@@ -10,6 +10,32 @@ import org.junit.jupiter.api.Test;
 public class HibernateRunnerTest {
 
     @Test
+    void checkFindByName() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        String name = "slava";
+        try {
+            transaction = session.beginTransaction();
+
+            Player player1 = Player.builder()
+                    .name("slava")
+                    .build();
+
+            session.persist(player1);
+
+            Player player = session.createQuery("select p FROM Player p where p.name = :playerName", Player.class)
+                    .setParameter("playerName", name)
+                    .uniqueResult();
+            System.out.println(player.getName());
+            transaction.commit();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+    }
+
+
+    @Test
     void checkAddMatch() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = null;

@@ -6,7 +6,7 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class PlayerDAO implements PlayerDAOInterface {
+public class PlayerDAO implements CrudRepository<Player, Long> {
 
     private Session session;
 
@@ -38,9 +38,9 @@ public class PlayerDAO implements PlayerDAOInterface {
         return session.get(Player.class, id);
     }
 
-    @Override
+
     public Player findByName(String name) {
-        return session.createQuery("select p FROM Player p where Player.name = :playerName", Player.class)
+        return session.createQuery("select p FROM Player p where p.name = :playerName", Player.class)
                 .setParameter("playerName", name)
                 .uniqueResult();
     }

@@ -10,7 +10,7 @@
 <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
     <h1>"Что вы хотите сделать?"</h1>
     <br>
-    <a href="/new">Начать матч</a>
+    <a href="http://localhost:8080/tenis_score_war_exploded/new">Начать матч</a>
     <a>Посмотреть все матчи</a>
 
 </div>
