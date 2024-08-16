@@ -1,6 +1,7 @@
 package com.slava.servlets;
 
 
+import com.slava.service.GameService;
 import com.slava.service.OnGoingMatchService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,12 +15,15 @@ import java.io.IOException;
 public class ScoreServlet extends HttpServlet {
 
     private OnGoingMatchService onGoingMatchService = OnGoingMatchService.getInstance();
+    private GameService gameService = new GameService();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String uuid;
         uuid = request.getParameter("uuid");
         if (!isUIIDCorrect(request, response, uuid)) return;
+
+
 
         request.setAttribute("uuid", uuid);
         request.getRequestDispatcher("match-score.jsp").forward(request, response);

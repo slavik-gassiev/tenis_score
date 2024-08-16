@@ -16,6 +16,9 @@ public class MatchDTO {
     private String player1CurrentScore;
     private String player2CurrentScore;
 
+    private int player1CurrentDeuce;
+    private int player2CurrentDeuce;
+
     private int player1GamesWon;
     private int player2GamesWon;
 
