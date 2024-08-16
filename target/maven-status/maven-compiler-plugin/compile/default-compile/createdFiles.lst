@@ -1,5 +1,0 @@
-com\slava\dao\PlayerDAO.class
-com\slava\entity\Match$MatchBuilder.class
-com\slava\entity\Match.class
-com\slava\dao\CrudRepository.class
-com\slava\dao\MatchDAO.class

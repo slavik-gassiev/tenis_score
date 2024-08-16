@@ -14,7 +14,7 @@ public class MyServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Передача параметра на JSP-страницу
-        request.setAttribute("message", "Hello from Servlet!");
+//        request.setAttribute("message", "Hello from Servlet!");
 
         // Перенаправление на JSP
         request.getRequestDispatcher("/new-match.jsp").forward(request, response);

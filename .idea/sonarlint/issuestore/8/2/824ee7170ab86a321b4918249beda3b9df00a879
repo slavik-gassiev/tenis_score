@@ -1,16 +1,10 @@
 
-]
-java:S1854"@Remove this useless assignment to local variable "currentScore".(£ø‹ä8‹Ëÿ”2
-\
-java:S1854!"@Remove this useless assignment to local variable "currentScore".(şÃù8‹Ëÿ”2
-b
-java:S1854$"@Remove this useless assignment to local variable "currentScore".(ˆØÒÿÿÿÿÿ8Ÿ‹Ëÿ”2
-]
-java:S1854)"@Remove this useless assignment to local variable "currentScore".(Ï“»8Ÿ‹Ëÿ”2
-8
-java:S3626,"Remove this redundant jump.(ûÁİ…8Ÿ‹Ëÿ”2
-C	java:S131""Add a default case to this switch.(¨í…¶üÿÿÿÿ8 ‹Ëÿ”2
-U
-java:S1144C"3Remove this unused private "checkSetWinner" method.(æÒ Ùùÿÿÿÿ8¦‹Ëÿ”2
-R
-java:S1144M"5Remove this unused private "checkMatchWinner" method.(Şë©³8¦‹Ëÿ”2
+C	java:S131""Add a default case to this switch.(¨í…¶üÿÿÿÿ8òÿÍŒ•2
+l
+java:S1764O"JCorrect one of the identical sub-expressions on both sides of operator "-"(âƒ¸Šøÿÿÿÿ8õÿÍŒ•2
+g
+java:S1764T"JCorrect one of the identical sub-expressions on both sides of operator "-"(æşöÇ8öÿÍŒ•2
+>
+java:S1116c"Remove this empty statement.(ôŸìúÿÿÿÿ8£—ÏŒ•2
+P
+java:S1144‹"3Remove this unused private "resetTieBreaks" method.(à¢§G8úÿÍŒ•2
