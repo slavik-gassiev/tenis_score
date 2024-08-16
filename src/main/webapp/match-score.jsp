@@ -23,6 +23,11 @@
             <td>${p2score}</td>
         </tr>
         <tr>
+            <td>Deuce</td>
+            <td>${p1deuce}</td>
+            <td>${p2deuce}</td>
+        </tr>
+        <tr>
             <td>Game</td>
             <td>${p1game}</td>
             <td>${p2game}</td>
@@ -39,10 +44,10 @@
         </tr>
     </table>
 
-    <div class="score-form">
-        <form class="scoreform" action="match-score?uuid=${uuid}" method="post" name="scoredform">
-            <button name = pscored value="1">${p1name} scored!</button>
-            <button name="pscored" value="2">${p2name} scored!</button>
+    <div >
+        <form action="match-score?uuid=${uuid}" method="post" name="scoredform">
+            <button name = point_winner value="p1">${p1name} scored!</button>
+            <button name="point_winner" value="p2">${p2name} scored!</button>
         </form>
     </div>
 </div>
