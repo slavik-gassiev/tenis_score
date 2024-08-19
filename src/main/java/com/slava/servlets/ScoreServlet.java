@@ -76,7 +76,7 @@ public class ScoreServlet extends HttpServlet {
             response.sendError(400, "Invalid uuid!");
             return false;
         }
-        if (onGoingMatchService.getMatch(uuid).isEmpty()) {
+        if (onGoingMatchService.isMatchExist(uuid)) {
             response.sendError(400, "No match with this uuid");
             return false;
         }

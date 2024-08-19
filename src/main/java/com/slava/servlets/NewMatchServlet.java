@@ -29,7 +29,7 @@ public class NewMatchServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+
         String p1name = req.getParameter("p1name");
         String p2name = req.getParameter("p2name");
 
