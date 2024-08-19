@@ -11,6 +11,7 @@
     <h1>"Что вы хотите сделать?"</h1>
     <br>
     <a href="http://localhost:8080/tenis_score_war_exploded/new">Начать матч</a>
+    <br>
     <a>Посмотреть все матчи</a>
 
 </div>

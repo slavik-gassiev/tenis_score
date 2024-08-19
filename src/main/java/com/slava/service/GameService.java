@@ -11,10 +11,7 @@ public class GameService {
     private volatile MatchDTO match;
 
     public void playerPoint(String uuid, PlayerDTO score) {
-        match = onGoingMatchService.getMatch(uuid).orElseGet(() -> {
-            System.out.println("Значение отсутствует, генерируем новое");
-            return new MatchDTO();
-        });
+        match = onGoingMatchService.getMatch(uuid);
 
 
         if (match.isFinished()) {

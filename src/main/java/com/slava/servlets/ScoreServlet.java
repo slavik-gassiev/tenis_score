@@ -25,7 +25,7 @@ public class ScoreServlet extends HttpServlet {
         uuid = request.getParameter("uuid");
         if (!isUIIDCorrect(request, response, uuid)) return;
 
-        MatchDTO matchDTO = onGoingMatchService.getMatch(uuid).get();
+        MatchDTO matchDTO = onGoingMatchService.getMatch(uuid);
 
         request.setAttribute("uuid", uuid);
         request.setAttribute("p1name", matchDTO.getPlayer1());
@@ -50,16 +50,16 @@ public class ScoreServlet extends HttpServlet {
         PlayerDTO playerDTO = null;
 
         if (req.getParameter("point_winner").equals("p1")) {
-             playerDTO = onGoingMatchService.getMatch(uuid).get().getPlayer1();
+             playerDTO = onGoingMatchService.getMatch(uuid).getPlayer1();
         }
         if (req.getParameter("point_winner").equals("p2")) {
-             playerDTO = onGoingMatchService.getMatch(uuid).get().getPlayer2();
+             playerDTO = onGoingMatchService.getMatch(uuid).getPlayer2();
         }
 
        gameService.playerPoint(uuid, playerDTO);
 
-        if(onGoingMatchService.getMatch(uuid).get().getWinner() != null
-        || onGoingMatchService.getMatch(uuid).get().isFinished()) {
+        if(onGoingMatchService.getMatch(uuid).getWinner() != null
+        || onGoingMatchService.getMatch(uuid).isFinished()) {
             req.getRequestDispatcher("finished-match.jsp").forward(req, resp);
         }
 
@@ -76,7 +76,7 @@ public class ScoreServlet extends HttpServlet {
             response.sendError(400, "Invalid uuid!");
             return false;
         }
-        if (onGoingMatchService.isMatchExist(uuid)) {
+        if (!onGoingMatchService.isMatchExist(uuid)) {
             response.sendError(400, "No match with this uuid");
             return false;
         }

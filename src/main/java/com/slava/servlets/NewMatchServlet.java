@@ -36,7 +36,7 @@ public class NewMatchServlet extends HttpServlet {
         if (!isPlayersNamesCorrect(resp, p1name, p2name)) return;
 
         MatchDTO matchDTO = initPlayersAndMatch(p1name, p2name);
-        UUID uuid =  onGoingMatchService.saveMatch(matchDTO);
+        String uuid =  onGoingMatchService.saveMatch(matchDTO);
         String redirect = String.format("/tenis_score_war_exploded/match-score?uuid=%s", uuid);
         resp.sendRedirect(redirect);
 
