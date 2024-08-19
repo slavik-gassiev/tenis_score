@@ -58,17 +58,15 @@ public class ScoreServlet extends HttpServlet {
 
        gameService.playerPoint(uuid, playerDTO);
 
-        if(onGoingMatchService.getMatch(uuid).getWinner() != null
-        || onGoingMatchService.getMatch(uuid).isFinished()) {
-            req.getRequestDispatcher("finished-match.jsp").forward(req, resp);
-        }
+//        if(onGoingMatchService.getMatch(uuid).getWinner() != null
+//        || onGoingMatchService.getMatch(uuid).isFinished()) {
+//            req.getRequestDispatcher("finished-match.jsp").forward(req, resp);
+//        }
 
-        try {
+
             String redirect = String.format("/tenis_score_war_exploded/match-score?uuid=%s", uuid);
             resp.sendRedirect(redirect);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+
 
     }
 

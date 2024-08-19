@@ -29,6 +29,7 @@ public class GameService {
         checkTieBreakWinner(uuid, match);
         checkSetWinner(uuid, match);
         checkMatchWinner(uuid, match);
+        int x = 1;
     }
 
     private synchronized void updateScore(String uuid, MatchDTO match, boolean isPlayer1) {
@@ -158,7 +159,7 @@ public class GameService {
             match.setFinished(true);
             onGoingMatchService.updateMatch(uuid, match);
             log.info("Player 1 wins the match!");
-        } else {
+        } else if (match.getPlayer2SetWon() == 2){
             match.setWinner(match.getPlayer2());
             match.setFinished(true);
             onGoingMatchService.updateMatch(uuid, match);
