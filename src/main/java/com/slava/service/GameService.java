@@ -8,7 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 public class GameService {
 
     private OnGoingMatchService onGoingMatchService = OnGoingMatchService.getInstance();
-    private MatchDTO match;
+    private volatile MatchDTO match;
 
     public void playerPoint(String uuid, PlayerDTO score) {
         match = onGoingMatchService.getMatch(uuid).orElseGet(() -> {
@@ -34,7 +34,7 @@ public class GameService {
         checkMatchWinner(uuid, match);
     }
 
-    private void updateScore(String uuid, MatchDTO match, boolean isPlayer1) {
+    private synchronized void updateScore(String uuid, MatchDTO match, boolean isPlayer1) {
         String currentScore = isPlayer1 ? match.getPlayer1CurrentScore() : match.getPlayer2CurrentScore();
         String opponentScore = isPlayer1 ? match.getPlayer2CurrentScore() : match.getPlayer1CurrentScore();
 
@@ -76,7 +76,7 @@ public class GameService {
         }
     }
 
-    private void winDeuce(String uuid, MatchDTO match, boolean isPlayer1) {
+    private synchronized void winDeuce(String uuid, MatchDTO match, boolean isPlayer1) {
         if (isPlayer1) {
             match.setPlayer1CurrentDeuce(match.getPlayer1CurrentDeuce() + 1);
             onGoingMatchService.updateMatch(uuid, match);
@@ -88,7 +88,7 @@ public class GameService {
         }
     }
 
-    private void checkDeuce(String uuid, MatchDTO match) {
+    private synchronized void checkDeuce(String uuid, MatchDTO match) {
         if (match.getPlayer1CurrentDeuce() >= 2 && match.getPlayer1CurrentDeuce() - match.getPlayer2CurrentDeuce() >= 2) {
             match.setDeuce(false);
             match.setPlayer1GamesWon(match.getPlayer1GamesWon() + 1);
@@ -100,7 +100,7 @@ public class GameService {
         }
     }
 
-    private void winGame(String uuid, MatchDTO match, boolean isPlayer1) {
+    private synchronized void winGame(String uuid, MatchDTO match, boolean isPlayer1) {
         if (isPlayer1) {
             match.setPlayer1GamesWon(match.getPlayer1GamesWon() + 1);
             onGoingMatchService.updateMatch(uuid, match);
@@ -115,7 +115,7 @@ public class GameService {
         resetScores(uuid, match);
     }
 
-    private void checkTieBreakWinner(String uuid, MatchDTO match) {
+    private synchronized void checkTieBreakWinner(String uuid, MatchDTO match) {
         if (match.getPlayer1TieBreaksWon() >= 7 && match.getPlayer1TieBreaksWon() - match.getPlayer2TieBreaksWon() >= 2) {
             match.setTieBreak(false);
             match.setPlayer1SetWon(match.getPlayer1SetWon() + 1);
@@ -129,7 +129,7 @@ public class GameService {
         }
     }
 
-    private void winTieBreak(String uuid, MatchDTO match, boolean isPlayer1) {
+    private synchronized void winTieBreak(String uuid, MatchDTO match, boolean isPlayer1) {
         if (isPlayer1) {
             match.setPlayer1TieBreaksWon(match.getPlayer1TieBreaksWon() + 1);
             onGoingMatchService.updateMatch(uuid, match);
@@ -140,7 +140,7 @@ public class GameService {
         };
     }
 
-    private void checkSetWinner(String uuid, MatchDTO match) {
+    private synchronized void checkSetWinner(String uuid, MatchDTO match) {
         if (match.getPlayer1GamesWon() >= 6 && match.getPlayer1GamesWon() - match.getPlayer2GamesWon() >= 2) {
             match.setPlayer1SetWon(match.getPlayer1SetWon() + 1);
             resetGameWins(uuid, match);
@@ -155,7 +155,7 @@ public class GameService {
         }
     }
 
-    private void checkMatchWinner(String uuid, MatchDTO match) {
+    private synchronized void checkMatchWinner(String uuid, MatchDTO match) {
         if (match.getPlayer1SetWon() == 2) {
             match.setWinner(match.getPlayer1());
             match.setFinished(true);
@@ -169,20 +169,20 @@ public class GameService {
         }
     }
 
-    private void resetScores(String uuid, MatchDTO match) {
+    private synchronized void resetScores(String uuid, MatchDTO match) {
         match.setPlayer1CurrentScore("0");
         match.setPlayer1CurrentScore("0");
         match.setDeuce(false);
         onGoingMatchService.updateMatch(uuid, match);
     }
 
-    private void resetGameWins(String uuid, MatchDTO match) {
+    private synchronized void resetGameWins(String uuid, MatchDTO match) {
         match.setPlayer1GamesWon(0);
         match.setPlayer2GamesWon(0);
         onGoingMatchService.updateMatch(uuid, match);
     }
 
-    private void resetTieBreaks(MatchDTO match) {
+    private synchronized void resetTieBreaks(MatchDTO match) {
         match.setPlayer1TieBreaksWon(0);
         match.setPlayer2TieBreaksWon(0);
     }
