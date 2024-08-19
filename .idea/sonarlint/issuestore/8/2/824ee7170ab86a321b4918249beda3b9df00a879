@@ -1,15 +1,16 @@
 
 g
-java:S1192@"JDefine a constant instead of duplicating this literal "tie-break" 3 times.(ş¦ìÑ8³øÒÒ•2
+java:S1192="JDefine a constant instead of duplicating this literal "tie-break" 3 times.(ş¦ìÑ8”ºÖĞ–2
 h
-java:S11926"FDefine a constant instead of duplicating this literal "deuce" 3 times.(ôëâéıÿÿÿÿ8³øÒÒ•2
+java:S11923"FDefine a constant instead of duplicating this literal "deuce" 3 times.(ôëâéıÿÿÿÿ8•ºÖĞ–2
 v
-java:S1450"TRemove the "match" field and declare it as a local variable in the relevant methods.(ªıîúÿÿÿÿ8¸øÒÒ•2
-L	java:S106"+Replace this use of System.out by a logger.(ğŸşøûÿÿÿÿ8»øÒÒ•2
+java:S1450"TRemove the "match" field and declare it as a local variable in the relevant methods.(ª¦À¾ûÿÿÿÿ8ªºÖĞ–2
+y
+java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(ª¦À¾ûÿÿÿÿ8¬ºÖĞ–2
 c
-java:S18547"ARemove this useless assignment to local variable "opponentScore".(Ô¹ìúÿÿÿÿ8½øÒÒ•2
-C	java:S131)""Add a default case to this switch.(¨í…¶üÿÿÿÿ8¾øÒÒ•2
+java:S18544"ARemove this useless assignment to local variable "opponentScore".(Ô¹ìúÿÿÿÿ8¯ºÖĞ–2
+C	java:S131&""Add a default case to this switch.(¨í…¶üÿÿÿÿ8°ºÖĞ–2
 ?
-java:S1116Œ"Remove this empty statement.(ôŸìúÿÿÿÿ8ÂøÒÒ•2
-P
-java:S1144¹"3Remove this unused private "resetTieBreaks" method.(à¢§G8ÅøÒÒ•2
+java:S1116‰"Remove this empty statement.(ôŸìúÿÿÿÿ8µºÖĞ–2
+Q
+java:S1144¶"3Remove this unused private "resetTieBreaks" method.(öü¸å8¹ºÖĞ–2

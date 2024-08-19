@@ -1,15 +1,8 @@
 
-r
-java:S3655="PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(£ÆÆ§ÿÿÿÿÿ8¬Õ¥×•2
-r
-java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ïÖä†øÿÿÿÿ8«Õ¥×•2
-m
-java:S36558"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(”Ô»Ú8¬Õ¥×•2
-m
-java:S3655>"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(öšÚ8¬Õ¥×•2
-m
-java:S36555"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(­ããÛ8¬Õ¥×•2
+E
+java:S5411T"(Use a primitive boolean expression here.(ÿ¦‰8ÙûõÒ–2
 R
-java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8¯Õ¥×•2
+java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8èûõÒ–2
 O
-java:S1948"-Make "gameService" transient or serializable.(¼±Ìˆşÿÿÿÿ8¯Õ¥×•2
+java:S1948"-Make "gameService" transient or serializable.(¼±Ìˆşÿÿÿÿ8èûõÒ–2
+L	java:S106F"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8ñûõÒ–2

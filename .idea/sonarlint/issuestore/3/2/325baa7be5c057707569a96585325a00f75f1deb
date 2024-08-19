@@ -1,13 +1,14 @@
 
 p
-java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÚõ8•ÉãĞ•2
+java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÚõ8Ì¿ŒÒ–2
 ¶
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(áµŸÿ8£ÉãĞ•2
+java:S6548
+"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(áµŸÿ8Î¿ŒÒ–2
+y
+java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(¼Ù¸¸úÿÿÿÿ8Ï¿ŒÒ–2
 >
-java:S1116"Remove this empty statement.(×î©ÿÿÿÿÿ8½ÉãĞ•2
-e
-java:S2175"CA "Map<UUID, MatchDTO>" cannot contain a "String" in a "UUID" type.(¨šğÿÿÿÿÿ8èì³–2
-e
-java:S2175"CA "Map<UUID, MatchDTO>" cannot contain a "String" in a "UUID" type.(¯ÂÆşÿÿÿÿ8êì³–2
+java:S1116"Remove this empty statement.(×î©ÿÿÿÿÿ8Ñ¿ŒÒ–2
+c
+java:S1126"AReplace this if-then-else statement by a single return statement.(ÅÒ¸Êøÿÿÿÿ8Ó¿ŒÒ–2
 b
-java:S1124&"EReorder the modifiers to comply with the Java Language Specification.(Êë¶²8ÏÉãĞ•2
+java:S1124-"EReorder the modifiers to comply with the Java Language Specification.(Êë¶²8Ö¿ŒÒ–2
