@@ -59,6 +59,8 @@ public class NewMatchServlet extends HttpServlet {
         return MatchDTO.builder()
                 .player1(player1DTO)
                 .player2(player2DTO)
+                .player1CurrentScore("0")
+                .player2CurrentScore("0")
                 .isFinished(false)
                 .isDeuce(false)
                 .isTieBreak(false)

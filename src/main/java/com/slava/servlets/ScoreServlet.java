@@ -63,8 +63,13 @@ public class ScoreServlet extends HttpServlet {
             req.getRequestDispatcher("finished-match.jsp").forward(req, resp);
         }
 
-        String redirect = String.format("/tenis_score_war_exploded/match-score?uuid=%s", uuid);
-        resp.sendRedirect(redirect);
+        try {
+            String redirect = String.format("/tenis_score_war_exploded/match-score?uuid=%s", uuid);
+            resp.sendRedirect(redirect);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
     }
 
     private boolean isUIIDCorrect(HttpServletRequest request, HttpServletResponse response, String uuid) throws IOException {
