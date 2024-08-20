@@ -35,7 +35,7 @@
         <tr>
             <td>Tir-break</td>
             <td>${p1TieBreak}</td>
-            <td>${p1TieBreak}</td>
+            <td>${p2TieBreak}</td>
         </tr>
         <tr>
             <td>Set</td>

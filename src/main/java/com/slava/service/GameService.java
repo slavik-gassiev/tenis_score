@@ -29,7 +29,7 @@ public class GameService {
         checkTieBreakWinner(uuid, match);
         checkSetWinner(uuid, match);
         checkMatchWinner(uuid, match);
-        int x = 1;
+
     }
 
     private synchronized void updateScore(String uuid, MatchDTO match, boolean isPlayer1) {
@@ -46,8 +46,6 @@ public class GameService {
             case "30":
                 if ("40".equals(opponentScore)) {
                     match.setDeuce(true);
-                    currentScore = "deuce";
-                    opponentScore = "deuce";
                 } else {
                     currentScore = "40";
                 }
@@ -65,13 +63,18 @@ public class GameService {
 
         }
 
-        if (isPlayer1) {
+        if (match.isDeuce()) {
+            currentScore = "deuce";
+            opponentScore = "deuce";
             match.setPlayer1CurrentScore(currentScore);
             match.setPlayer2CurrentScore(opponentScore);
+        }
+        if (isPlayer1) {
+            match.setPlayer1CurrentScore(currentScore);
             onGoingMatchService.updateMatch(uuid, match);
-        } else {
+        }
+        if(!isPlayer1) {
             match.setPlayer2CurrentScore(currentScore);
-            match.setPlayer1CurrentScore(opponentScore);
             onGoingMatchService.updateMatch(uuid, match);
         }
     }
