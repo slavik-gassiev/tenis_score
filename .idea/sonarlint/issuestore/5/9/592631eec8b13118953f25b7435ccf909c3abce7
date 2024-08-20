@@ -1,8 +1,8 @@
 
 E
-java:S5411T"(Use a primitive boolean expression here.(ÿ¦‰8ÙûõÒ–2
+java:S5411Z"(Use a primitive boolean expression here.(ÿ¦‰8ĞßõÖ–2
 R
-java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8èûõÒ–2
+java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8âßõÖ–2
 O
-java:S1948"-Make "gameService" transient or serializable.(¼±Ìˆşÿÿÿÿ8èûõÒ–2
-L	java:S106F"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8ñûõÒ–2
+java:S1948"-Make "gameService" transient or serializable.(¼±Ìˆşÿÿÿÿ8âßõÖ–2
+]	java:S125E"<This block of commented-out lines of code should be removed.(³·”Ëıÿÿÿÿ8§š¥õ–2

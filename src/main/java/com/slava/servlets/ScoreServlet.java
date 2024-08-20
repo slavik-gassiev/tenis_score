@@ -27,6 +27,8 @@ public class ScoreServlet extends HttpServlet {
 
         MatchDTO matchDTO = onGoingMatchService.getMatch(uuid);
 
+
+
         request.setAttribute("uuid", uuid);
         request.setAttribute("p1name", matchDTO.getPlayer1());
         request.setAttribute("p2name",  matchDTO.getPlayer2());
@@ -40,8 +42,14 @@ public class ScoreServlet extends HttpServlet {
         request.setAttribute("p2TieBreak", matchDTO.getPlayer2TieBreaksWon());
         request.setAttribute("p1set", matchDTO.getPlayer1SetWon());
         request.setAttribute("p2set", matchDTO.getPlayer2SetWon());
+        request.setAttribute("winner", matchDTO.getWinner());
+
+        if (matchDTO.isFinished()) {
+            request.getRequestDispatcher("finished-match.jsp").forward(request, response);
+        }
 
         request.getRequestDispatcher("match-score.jsp").forward(request, response);
+
     }
 
     @Override
