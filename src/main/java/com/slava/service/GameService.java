@@ -44,17 +44,17 @@ public class GameService {
                 currentScore = "30";
                 break;
             case "30":
-                currentScore = "40";
-                break;
-            case "40":
                 if ("40".equals(opponentScore)) {
                     match.setDeuce(true);
                     currentScore = "deuce";
                     opponentScore = "deuce";
                 } else {
-                    winGame(uuid,match, isPlayer1);
-                    return;
+                    currentScore = "40";
                 }
+                break;
+            case "40":
+                currentScore = "0";
+                winGame(uuid,match, isPlayer1);
                 break;
             case "deuce":
                 winDeuce(uuid, match, isPlayer1);
