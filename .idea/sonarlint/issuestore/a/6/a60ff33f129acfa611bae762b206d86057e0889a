@@ -1,7 +1,7 @@
 
 R
-java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8ÆÄáÒ–2
+java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8Çù¥û–2
 H
-java:S1948"+Make "playerDao" transient or serializable.(ı¢æ8ÆÄáÒ–2
+java:S1948"+Make "playerDao" transient or serializable.(ı¢æ8Çù¥û–2
 M
-java:S1128"+Remove this unused import 'java.util.UUID'.(ÀãÄ£úÿÿÿÿ8ÍÄáÒ–2
+java:S1128"+Remove this unused import 'java.util.UUID'.(ÀãÄ£úÿÿÿÿ8Ñù¥û–2

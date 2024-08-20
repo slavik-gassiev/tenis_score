@@ -1,8 +1,9 @@
 
 E
-java:S5411Z"(Use a primitive boolean expression here.(ÿ¦‰8ĞßõÖ–2
+java:S5411z"(Use a primitive boolean expression here.(ÿ¦‰8âÂºû–2
 R
-java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8âßõÖ–2
+java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8ğÂºû–2
 O
-java:S1948"-Make "gameService" transient or serializable.(¼±Ìˆşÿÿÿÿ8âßõÖ–2
-]	java:S125E"<This block of commented-out lines of code should be removed.(³·”Ëıÿÿÿÿ8§š¥õ–2
+java:S1948"-Make "gameService" transient or serializable.(¼±Ìˆşÿÿÿÿ8ğúÖû–2
+G
+java:S1948"*Make "matchDAO" transient or serializable.(Ä‡¼8ğÂºû–2
