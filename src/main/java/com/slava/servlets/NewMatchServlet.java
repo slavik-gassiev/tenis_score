@@ -55,6 +55,7 @@ public class NewMatchServlet extends HttpServlet {
             playerDao.save(Player.builder().name(p2name).build());
             player2DTO = PlayerDTO.builder().name(p2name).build();
         }
+        session.close();
 
         return MatchDTO.builder()
                 .player1(player1DTO)
