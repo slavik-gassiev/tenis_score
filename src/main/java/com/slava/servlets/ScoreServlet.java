@@ -81,7 +81,7 @@ public class ScoreServlet extends HttpServlet {
                 .build();
 
         Player player2 = Player.builder()
-                .name(matchDTO.getPlayer1().getName())
+                .name(matchDTO.getPlayer2().getName())
                 .build();
 
         Player winner = Player.builder()

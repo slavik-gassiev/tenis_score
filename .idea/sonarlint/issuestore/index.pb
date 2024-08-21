@@ -71,3 +71,5 @@ g
 7src/main/java/com/slava/servlets/AllMatchesServlet.java,5\d\5ddbb77e399c5da41ff442d924f3f503ff310af9
 O
 src/main/webapp/all-matches.jsp,6\6\66852e9a43cf1c69a72ac34e8bc9e478feacd535
+X
+(src/main/java/com/slava/util/Mapper.java,a\4\a41b8740d8469327404ea7754915821b72a3150f
