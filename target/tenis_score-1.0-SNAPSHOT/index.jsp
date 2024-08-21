@@ -12,7 +12,7 @@
     <br>
     <a href="http://localhost:8080/tenis_score_war_exploded/new">Начать матч</a>
     <br>
-    <a>Посмотреть все матчи</a>
+    <a href="http://localhost:8080/tenis_score_war_exploded/all">Посмотреть все матчи</a>
 
 </div>
 </body>
