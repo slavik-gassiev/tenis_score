@@ -11,46 +11,57 @@
 
 <div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
 
-    <table>
+    <table border="1">
+        <thead>
         <tr>
-            <td></td>
-            <th>${p1name}</th>
-            <th>${p2name}</th>
+            <th>Players</th>
+            <th>Score</th>
+            <th>Deuce</th>
+            <th>Game</th>
+            <th>Tie-break</th>
+            <th>Set</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
-            <td>Score</td>
-            <td>${p1score}</td>
-            <td>${p2score}</td>
+            <th>${p1name.name}
+                <hr>
+                ${p2name.name}</th>
+
+            <td>${p1score}
+                <hr>
+                ${p2score}</td>
+
+            <td>${p1deuce}
+                <hr>
+                ${p2deuce}</td>
+
+            <td>${p1game}
+                <hr>
+                ${p2game}</td>
+
+            <td>${p1TieBreak}
+                <hr>
+                ${p2TieBreak}</td>
+
+            <td>${p1set}
+                <hr>
+                ${p2set}</td>
+
         </tr>
-        <tr>
-            <td>Deuce</td>
-            <td>${p1deuce}</td>
-            <td>${p2deuce}</td>
-        </tr>
-        <tr>
-            <td>Game</td>
-            <td>${p1game}</td>
-            <td>${p2game}</td>
-        </tr>
-        <tr>
-            <td>Tir-break</td>
-            <td>${p1TieBreak}</td>
-            <td>${p2TieBreak}</td>
-        </tr>
-        <tr>
-            <td>Set</td>
-            <td>${p1set}</td>
-            <td>${p2set}</td>
-        </tr>
+        </tbody>
     </table>
 
-    <div >
+    <div style="margin-top: 2vh;">
         <form action="match-score?uuid=${uuid}" method="post" name="scoredform">
-            <button name ="point_winner" value="p1">${p1name} scored!</button>
-            <button name="point_winner" value="p2">${p2name} scored!</button>
+            <button  name ="point_winner" value="p1">${p1name.name} scored!</button>
+            <button name="point_winner" value="p2">${p2name.name} scored!</button>
         </form>
     </div>
 </div>
+
+
+
 </body>
 </html>
 

@@ -65,11 +65,11 @@ d
 4src/test/java/com/slava/OnGoingMatchServiceTest.java,c\f\cfbd9e9655c4c0f46f508d1d7610fe3584cd6817
 R
 "src/main/webapp/finished-match.jsp,1\a\1ad5112711fa0b6e033136fa849df4a1a1b2a884
-\
-,src/test/java/com/slava/ModelMapperTest.java,8\1\8140bda266127e97c2596aa0028435207357c96b
 g
 7src/main/java/com/slava/servlets/AllMatchesServlet.java,5\d\5ddbb77e399c5da41ff442d924f3f503ff310af9
 O
 src/main/webapp/all-matches.jsp,6\6\66852e9a43cf1c69a72ac34e8bc9e478feacd535
-X
-(src/main/java/com/slava/util/Mapper.java,a\4\a41b8740d8469327404ea7754915821b72a3150f
+\
+,src/main/java/com/slava/util/MapperUtil.java,a\a\aa649e5025a4dca0bbd9f859f96c1e558b0d9b28
+`
+0src/test/java/com/slava/ModelMapperTestUtil.java,5\a\5a64ce66666fb2613a0172ae8ce99ebc7895f0ee
