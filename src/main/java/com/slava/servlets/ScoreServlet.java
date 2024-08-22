@@ -6,6 +6,7 @@ import com.slava.dto.MatchDTO;
 import com.slava.dto.PlayerDTO;
 import com.slava.entity.Match;
 import com.slava.entity.Player;
+import com.slava.exceptions.InvalidParameter;
 import com.slava.service.GameService;
 import com.slava.service.OnGoingMatchService;
 import com.slava.util.HibernateUtil;
@@ -30,7 +31,7 @@ public class ScoreServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String uuid;
         uuid = request.getParameter("uuid");
-        if (!isUIIDCorrect(request, response, uuid)) return;
+        isUIIDCorrect(request, response, uuid);
 
         MatchDTO matchDTO = onGoingMatchService.getMatch(uuid);
         setAttributes(request, uuid, matchDTO);
@@ -110,19 +111,15 @@ public class ScoreServlet extends HttpServlet {
         return playerDTO;
     }
 
-    private boolean isUIIDCorrect(HttpServletRequest request, HttpServletResponse response, String uuid) throws IOException {
+    private void isUIIDCorrect(HttpServletRequest request, HttpServletResponse response, String uuid) throws IOException {
         if(request.getParameterMap().isEmpty()) {
-            response.sendError(400, "No parameters!");
-            return false;
+            throw new InvalidParameter("No parameters!");
         }
         if (uuid.isBlank()) {
-            response.sendError(400, "Invalid uuid!");
-            return false;
+            throw new InvalidParameter("Invalid uuid!");
         }
         if (!onGoingMatchService.isMatchExist(uuid)) {
-            response.sendError(400, "No match with this uuid");
-            return false;
+            throw new InvalidParameter("No match with this uuid");
         }
-        return true;
     }
 }

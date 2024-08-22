@@ -4,6 +4,7 @@ import com.slava.dao.PlayerDAO;
 import com.slava.dto.MatchDTO;
 import com.slava.dto.PlayerDTO;
 import com.slava.entity.Player;
+import com.slava.exceptions.InvalidParameter;
 import com.slava.service.OnGoingMatchService;
 import com.slava.util.HibernateUtil;
 import jakarta.servlet.ServletException;
@@ -33,7 +34,7 @@ public class NewMatchServlet extends HttpServlet {
         String p1name = req.getParameter("p1name");
         String p2name = req.getParameter("p2name");
 
-        if (!isPlayersNamesCorrect(resp, p1name, p2name)) return;
+        isPlayersNamesCorrect(resp, p1name, p2name);
 
         MatchDTO matchDTO = initPlayersAndMatch(p1name, p2name);
         String uuid =  onGoingMatchService.saveMatch(matchDTO);
@@ -68,19 +69,16 @@ public class NewMatchServlet extends HttpServlet {
                 .build();
     }
 
-    private boolean isPlayersNamesCorrect(HttpServletResponse resp, String p1name, String p2name) throws IOException {
+    private void isPlayersNamesCorrect(HttpServletResponse resp, String p1name, String p2name) throws IOException {
         if (p1name == null || p2name == null) {
-            resp.sendError(400, "Invalid player name!");
-            return false;
+            throw new InvalidParameter("Invalid player name!");
         }
         if (p1name.isBlank() || p2name.isBlank()) {
-            resp.sendError(400, "invalid player name!");
-            return false;
+            throw new InvalidParameter("Invalid player name!");
+
         }
         if (p1name.equals(p2name)) {
-            resp.sendError(400, "Players names can't be same!");
-            return false;
+            throw new InvalidParameter("Players names can't be same!");
         }
-        return true;
     }
 }

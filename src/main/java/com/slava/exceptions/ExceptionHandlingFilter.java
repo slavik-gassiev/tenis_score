@@ -11,7 +11,7 @@ import java.io.IOException;
 public class ExceptionHandlingFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        Filter.super.init(filterConfig);
+//        Filter.super.init(filterConfig);
     }
 
     @Override
@@ -27,6 +27,8 @@ public class ExceptionHandlingFilter implements Filter {
             handleException((HttpServletRequest) servletRequest, (HttpServletResponse) servletResponse, e, HttpServletResponse.SC_NOT_FOUND);
         }catch (MatchValidationException e) {
             handleException((HttpServletRequest) servletRequest, (HttpServletResponse) servletResponse, e, HttpServletResponse.SC_BAD_REQUEST);
+        }catch (InvalidParameter e) {
+            handleException((HttpServletRequest) servletRequest, (HttpServletResponse) servletResponse, e, HttpServletResponse.SC_NOT_ACCEPTABLE);
         }catch (Exception e) {
             handleException((HttpServletRequest) servletRequest, (HttpServletResponse) servletResponse, e, HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }
@@ -34,10 +36,10 @@ public class ExceptionHandlingFilter implements Filter {
 
     private void handleException(HttpServletRequest servletRequest, HttpServletResponse servletResponse,
                                  Exception e, int statusCode)
-            throws IOException{
+            throws IOException, ServletException {
         servletResponse.setStatus(statusCode);
         servletRequest.setAttribute("errorMessage", e.getMessage());
-        servletRequest.getRequestDispatcher("/error.jsp");
+        servletRequest.getRequestDispatcher("/error.jsp").forward(servletRequest, servletResponse);
     }
 
     @Override

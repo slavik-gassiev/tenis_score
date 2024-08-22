@@ -45,6 +45,7 @@ public class PlayerDAO implements CrudRepository<Player, Long> {
                 .uniqueResult();
     }
 
+
     @Override
     public List<Player> findAll() {
         return session.createQuery("SELECT p FROM Player p", Player.class).getResultList();
