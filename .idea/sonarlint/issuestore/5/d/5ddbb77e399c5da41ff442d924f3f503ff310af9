@@ -1,9 +1,5 @@
 
-G
-java:S1948"*Make "matchDAO" transient or serializable.(ŠÀñœ8€¯ì¦—2
 J
 java:S1948"(Make "mapper" transient or serializable.(“û˜Ñüÿÿÿÿ8¯ì¦—2
 ]	java:S125"<This block of commented-out lines of code should be removed.(à…ç›ùÿÿÿÿ8¦¶Â§—2
-o
-java:S6204""RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8‹¯ì¦—2
 L	java:S106$"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8Œ¯ì¦—2

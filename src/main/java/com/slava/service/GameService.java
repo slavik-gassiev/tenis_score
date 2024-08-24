@@ -2,6 +2,7 @@ package com.slava.service;
 
 import com.slava.dto.MatchDTO;
 import com.slava.dto.PlayerDTO;
+import com.slava.exceptions.MatchNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -11,7 +12,11 @@ public class GameService {
     private volatile MatchDTO match;
 
     public void playerPoint(String uuid, PlayerDTO score) {
-        match = onGoingMatchService.getMatch(uuid);
+        if (onGoingMatchService.getMatch(uuid) != null) {
+            match = onGoingMatchService.getMatch(uuid);
+        } else {
+            throw new MatchNotFoundException("Матч не найде");
+        }
 
 
         if (match.isFinished()) {

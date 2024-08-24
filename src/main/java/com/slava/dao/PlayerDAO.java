@@ -1,10 +1,12 @@
 package com.slava.dao;
 
 import com.slava.entity.Player;
+import com.slava.exceptions.InvalidParameter;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
+import java.util.Optional;
 
 public class PlayerDAO implements CrudRepository<Player, Long> {
 
@@ -29,7 +31,7 @@ public class PlayerDAO implements CrudRepository<Player, Long> {
             if (transaction != null) {
                 transaction.rollback();
             }
-            e.printStackTrace();
+            throw new InvalidParameter(e.getMessage());
         }
     }
 

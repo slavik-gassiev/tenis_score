@@ -1,9 +1,13 @@
 
 E
-java:S5411z"(Use a primitive boolean expression here.(ÿ¦‰8âÂºû–2
+java:S5411y"(Use a primitive boolean expression here.(ÿ¦‰8Ö½ªÍ—2
 R
-java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8ğÂºû–2
+java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8î½ªÍ—2
 O
-java:S1948"-Make "gameService" transient or serializable.(¼±Ìˆşÿÿÿÿ8ğúÖû–2
+java:S1948"-Make "gameService" transient or serializable.(¼±Ìˆşÿÿÿÿ8î½ªÍ—2
 G
-java:S1948"*Make "matchDAO" transient or serializable.(Ä‡¼8ğÂºû–2
+java:S1948"*Make "matchDAO" transient or serializable.(Ä‡¼8î½ªÍ—2
+
+java:S1130r"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(±éìŒøÿÿÿÿ8ğ½ªÍ—2
+Q
+java:S1172r"/Remove this unused method parameter "response".(±éìŒøÿÿÿÿ8‡¶ÜÌ—2

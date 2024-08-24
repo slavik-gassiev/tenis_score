@@ -3,6 +3,7 @@ package com.slava.servlets;
 import com.slava.dao.MatchDAO;
 import com.slava.dto.MatchDTO;
 import com.slava.entity.Match;
+import com.slava.exceptions.MatchesNotFoundException;
 import com.slava.util.HibernateUtil;
 import com.slava.util.MapperUtil;
 import jakarta.servlet.ServletException;
@@ -33,7 +34,7 @@ public class AllMatchesServlet extends HttpServlet {
                     .map(match -> mapper.map(match, MatchDTO.class))
                     .collect(Collectors.toList());
         } catch (Exception e) {
-            System.out.println(e);
+            throw new MatchesNotFoundException("Не удалось загрузить матчи");
         }
         if (matchesDTO != null) {
             req.setAttribute("matches", matchesDTO);

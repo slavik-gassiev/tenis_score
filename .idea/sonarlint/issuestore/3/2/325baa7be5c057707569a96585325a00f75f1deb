@@ -4,8 +4,6 @@ java:S3008"SRename this field "INSTANCE" to match the regular expression '^[a-
 ¶
 java:S6548
 "˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(áµŸÿ8Î¿ŒÒ–2
-y
-java:S3077"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(¼Ù¸¸úÿÿÿÿ8Ï¿ŒÒ–2
 >
 java:S1116"Remove this empty statement.(×î©ÿÿÿÿÿ8Ñ¿ŒÒ–2
 c

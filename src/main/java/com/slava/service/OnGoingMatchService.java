@@ -4,6 +4,7 @@ import com.slava.dto.MatchDTO;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 
@@ -28,7 +29,8 @@ public class OnGoingMatchService {
     }
 
     public  synchronized MatchDTO getMatch(String uuid) {
-        return (matches.get(uuid));
+
+        return matches.get(uuid);
     }
 
     public void updateMatch(String uuid, MatchDTO matchDTO) {

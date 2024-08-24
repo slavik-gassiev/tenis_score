@@ -1,7 +1,11 @@
 
 R
-java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8Çù¥û–2
+java:S1948"5Make "onGoingMatchService" transient or serializable.(ôüÌœ8»½ªÍ—2
 H
-java:S1948"+Make "playerDao" transient or serializable.(ı¢æ8Çù¥û–2
+java:S1948"+Make "playerDao" transient or serializable.(ı¢æ8»½ªÍ—2
+‰
+java:S1130H"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ûªøÕ8Á½ªÍ—2
+H
+java:S1172H"+Remove this unused method parameter "resp".(ûªøÕ8À¼ÎÌ—2
 M
-java:S1128"+Remove this unused import 'java.util.UUID'.(ÀãÄ£úÿÿÿÿ8Ñù¥û–2
+java:S1128"+Remove this unused import 'java.util.UUID'.(ÀãÄ£úÿÿÿÿ8Á½ªÍ—2

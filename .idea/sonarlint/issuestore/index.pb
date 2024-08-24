@@ -73,3 +73,17 @@ O
 ,src/main/java/com/slava/util/MapperUtil.java,a\a\aa649e5025a4dca0bbd9f859f96c1e558b0d9b28
 `
 0src/test/java/com/slava/ModelMapperTestUtil.java,5\a\5a64ce66666fb2613a0172ae8ce99ebc7895f0ee
+p
+@src/main/java/com/slava/exceptions/MatchesNotFoundException.java,6\7\670a96c6b368d1fdf92952121c9bdd72ffb87233
+n
+>src/main/java/com/slava/exceptions/MatchNotFoundException.java,1\f\1fb42d4a283c85382b212f3091e09143a17f0e0a
+p
+@src/main/java/com/slava/exceptions/MatchValidationException.java,3\0\30f56f1b971c6f59b92bb9b90234d635cd8c5f6d
+o
+?src/main/java/com/slava/exceptions/PlayerNotFoundException.java,5\8\582a7a70a07bec0c0b82d7ffac7bfc33b8508628
+h
+8src/main/java/com/slava/exceptions/InvalidParameter.java,d\0\d0ebe698d8f55882eea957a59c10b1b7ec077a09
+o
+?src/main/java/com/slava/exceptions/ExceptionHandlingFilter.java,6\3\6356c6ba48d79517eb9604f6e9fb233f5ad1773c
+I
+src/main/webapp/error.jsp,c\b\cba3df22242d379bdb72d00919d2e8d49101d1bf
